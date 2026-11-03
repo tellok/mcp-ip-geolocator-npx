@@ -8,12 +8,7 @@ on:
 
 jobs:
   test:
-    runs-on:
-
-    - self-hosted
-    - tower
-    - ubuntu-latest
-    - tower-run-${{ github.run_id }}-${{ github.run_attempt }}
+    runs-on: ["self-hosted", "ubuntu-latest"]
     strategy:
       matrix:
         node-version: [18.x, 20.x]
